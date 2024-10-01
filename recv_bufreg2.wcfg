@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top_test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="18,947.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="19,135.001 ns"></ZoomEndTime>
+      <Cursor1Time time="20,705.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="304"></NameColumnWidth>
+      <ValueColumnWidth column_width="301"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="26" />
+   <wvobject fp_name="/top_test/dut/cpu/bufreg2/i_clk" type="logic">
+      <obj_property name="ElementShortName">i_clk</obj_property>
+      <obj_property name="ObjectShortName">i_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/test/stage_count" type="array">
+      <obj_property name="ElementShortName">stage_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">stage_count[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/o_ibus_adr" type="array">
+      <obj_property name="ElementShortName">o_ibus_adr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_ibus_adr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/o_ibus_cyc" type="logic">
+      <obj_property name="ElementShortName">o_ibus_cyc</obj_property>
+      <obj_property name="ObjectShortName">o_ibus_cyc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/i_ibus_ack" type="logic">
+      <obj_property name="ElementShortName">i_ibus_ack</obj_property>
+      <obj_property name="ObjectShortName">i_ibus_ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/test/ibus_dat" type="array">
+      <obj_property name="ElementShortName">ibus_dat[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ibus_dat[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/test/ibus_adr" type="array">
+      <obj_property name="ElementShortName">ibus_adr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ibus_adr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/bufreg2/i_en" type="logic">
+      <obj_property name="ElementShortName">i_en</obj_property>
+      <obj_property name="ObjectShortName">i_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/bufreg2/i_init" type="logic">
+      <obj_property name="ElementShortName">i_init</obj_property>
+      <obj_property name="ObjectShortName">i_init</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/bufreg2/i_cnt_done" type="logic">
+      <obj_property name="ElementShortName">i_cnt_done</obj_property>
+      <obj_property name="ObjectShortName">i_cnt_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/bufreg2/i_lsb" type="array">
+      <obj_property name="ElementShortName">i_lsb[1:0]</obj_property>
+      <obj_property name="ObjectShortName">i_lsb[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/bufreg2/i_byte_valid" type="logic">
+      <obj_property name="ElementShortName">i_byte_valid</obj_property>
+      <obj_property name="ObjectShortName">i_byte_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/bufreg2/o_sh_done" type="logic">
+      <obj_property name="ElementShortName">o_sh_done</obj_property>
+      <obj_property name="ObjectShortName">o_sh_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/bufreg2/o_sh_done_r" type="logic">
+      <obj_property name="ElementShortName">o_sh_done_r</obj_property>
+      <obj_property name="ObjectShortName">o_sh_done_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/bufreg2/i_op_b_sel" type="logic">
+      <obj_property name="ElementShortName">i_op_b_sel</obj_property>
+      <obj_property name="ObjectShortName">i_op_b_sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/bufreg2/i_shift_op" type="logic">
+      <obj_property name="ElementShortName">i_shift_op</obj_property>
+      <obj_property name="ObjectShortName">i_shift_op</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/bufreg2/i_rs2" type="logic">
+      <obj_property name="ElementShortName">i_rs2</obj_property>
+      <obj_property name="ObjectShortName">i_rs2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/bufreg2/i_imm" type="logic">
+      <obj_property name="ElementShortName">i_imm</obj_property>
+      <obj_property name="ObjectShortName">i_imm</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/bufreg2/o_op_b" type="logic">
+      <obj_property name="ElementShortName">o_op_b</obj_property>
+      <obj_property name="ObjectShortName">o_op_b</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/bufreg2/o_q" type="logic">
+      <obj_property name="ElementShortName">o_q</obj_property>
+      <obj_property name="ObjectShortName">o_q</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/bufreg2/o_dat" type="array">
+      <obj_property name="ElementShortName">o_dat[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_dat[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/bufreg2/i_load" type="logic">
+      <obj_property name="ElementShortName">i_load</obj_property>
+      <obj_property name="ObjectShortName">i_load</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/bufreg2/i_dat" type="array">
+      <obj_property name="ElementShortName">i_dat[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_dat[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/bufreg2/dat_en" type="logic">
+      <obj_property name="ElementShortName">dat_en</obj_property>
+      <obj_property name="ObjectShortName">dat_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/bufreg2/dat" type="array">
+      <obj_property name="ElementShortName">dat[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dat[31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/bufreg2/dat_shamt" type="array">
+      <obj_property name="ElementShortName">dat_shamt[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dat_shamt[5:0]</obj_property>
+   </wvobject>
+</wave_config>
