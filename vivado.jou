@@ -1,0 +1,43 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Fri Oct 18 14:24:11 2024
+# Process ID: 6728
+# Current directory: C:/Users/ADMIN/Desktop/Project_2/SERV_TEST_PROJECT/SERV_TEST
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21084 C:\Users\ADMIN\Desktop\Project_2\SERV_TEST_PROJECT\SERV_TEST\SERV_TEST.xpr
+# Log file: C:/Users/ADMIN/Desktop/Project_2/SERV_TEST_PROJECT/SERV_TEST/vivado.log
+# Journal file: C:/Users/ADMIN/Desktop/Project_2/SERV_TEST_PROJECT/SERV_TEST\vivado.jou
+# Running On        :DESKTOP-S24Q89O
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :AMD Ryzen 7 8845H w/ Radeon 780M Graphics
+# CPU Frequency     :3793 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :29860 MB
+# Swap memory       :11811 MB
+# Total Virtual     :41671 MB
+# Available Virtual :8004 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ADMIN/Desktop/Project_2/SERV_TEST_PROJECT/SERV_TEST/SERV_TEST.xpr
+update_compile_order -fileset sources_1
+add_files -scan_for_includes C:/Users/ADMIN/Desktop/Project_2/SERV_TEST_PROJECT/mdu/rtl/mdu_top.v
+import_files C:/Users/ADMIN/Desktop/Project_2/SERV_TEST_PROJECT/mdu/rtl/mdu_top.v
+update_compile_order -fileset sources_1
+create_fileset -simset sim_mdu
+current_fileset -simset [ get_filesets sim_mdu ]
+file mkdir C:/Users/ADMIN/Desktop/Project_2/SERV_TEST_PROJECT/SERV_TEST/SERV_TEST.srcs/sim_mdu/new
+set_property SOURCE_SET sources_1 [get_filesets sim_mdu]
+close [ open C:/Users/ADMIN/Desktop/Project_2/SERV_TEST_PROJECT/SERV_TEST/SERV_TEST.srcs/sim_mdu/new/mdu_if.sv w ]
+add_files -fileset sim_mdu C:/Users/ADMIN/Desktop/Project_2/SERV_TEST_PROJECT/SERV_TEST/SERV_TEST.srcs/sim_mdu/new/mdu_if.sv
+close [ open C:/Users/ADMIN/Desktop/Project_2/SERV_TEST_PROJECT/SERV_TEST/SERV_TEST.srcs/sim_mdu/new/mdu_top_test.sv w ]
+add_files -fileset sim_mdu C:/Users/ADMIN/Desktop/Project_2/SERV_TEST_PROJECT/SERV_TEST/SERV_TEST.srcs/sim_mdu/new/mdu_top_test.sv
+close [ open C:/Users/ADMIN/Desktop/Project_2/SERV_TEST_PROJECT/SERV_TEST/SERV_TEST.srcs/sim_mdu/new/mdu_test_program.sv w ]
+add_files -fileset sim_mdu C:/Users/ADMIN/Desktop/Project_2/SERV_TEST_PROJECT/SERV_TEST/SERV_TEST.srcs/sim_mdu/new/mdu_test_program.sv
+update_compile_order -fileset sim_mdu
+update_compile_order -fileset sim_mdu
+update_compile_order -fileset sim_mdu
+update_compile_order -fileset sim_mdu

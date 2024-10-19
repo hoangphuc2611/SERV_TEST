@@ -1,0 +1,5 @@
+Time resolution is 1 ps
+Preloading servant_top_test.dut.ram from zephyr_hello.hex
+       0	| ------- RESET START -------
+      25	| ------- RESET DONE -------
+$finish called at time : 25 ns : File "C:/Users/ADMIN/Desktop/Project_2/SERV_TEST_PROJECT/SERV_TEST/SERV_TEST.srcs/sim_1/new/servant_test_program.sv" Line 9

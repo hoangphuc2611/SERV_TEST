@@ -9,62 +9,62 @@ module serv_top
     parameter [0:0] COMPRESSED = 0,
     parameter [0:0] ALIGN = COMPRESSED)
    (
-   input wire 		   clk,
-   input wire 		   i_rst,
-   input wire 		   i_timer_irq,
+   input wire          clk,
+   input wire          i_rst,
+   input wire          i_timer_irq,
 `ifdef RISCV_FORMAL
-   output reg 		   rvfi_valid = 1'b0,
+   output reg        rvfi_valid = 1'b0,
    output reg [63:0] rvfi_order = 64'd0,
    output reg [31:0] rvfi_insn = 32'd0,
-   output reg 		   rvfi_trap = 1'b0,
-   output reg 		   rvfi_halt = 1'b0,
-   output reg 		   rvfi_intr = 1'b0,
-   output reg [1:0] 	rvfi_mode = 2'b11,
-   output reg [1:0] 	rvfi_ixl = 2'b01,
-   output reg [4:0] 	rvfi_rs1_addr,
-   output reg [4:0] 	rvfi_rs2_addr,
+   output reg        rvfi_trap = 1'b0,
+   output reg        rvfi_halt = 1'b0,
+   output reg        rvfi_intr = 1'b0,
+   output reg [1:0]  rvfi_mode = 2'b11,
+   output reg [1:0]  rvfi_ixl = 2'b01,
+   output reg [4:0]  rvfi_rs1_addr,
+   output reg [4:0]  rvfi_rs2_addr,
    output reg [31:0] rvfi_rs1_rdata,
    output reg [31:0] rvfi_rs2_rdata,
-   output reg [4:0] 	rvfi_rd_addr,
+   output reg [4:0]  rvfi_rd_addr,
    output reg [31:0] rvfi_rd_wdata,
    output reg [31:0] rvfi_pc_rdata,
    output reg [31:0] rvfi_pc_wdata,
    output reg [31:0] rvfi_mem_addr,
-   output reg [3:0] 	rvfi_mem_rmask,
-   output reg [3:0] 	rvfi_mem_wmask,
+   output reg [3:0]  rvfi_mem_rmask,
+   output reg [3:0]  rvfi_mem_wmask,
    output reg [31:0] rvfi_mem_rdata,
    output reg [31:0] rvfi_mem_wdata,
 `endif
    //RF Interface
-   output wire 		         o_rf_rreq,
-   output wire 		         o_rf_wreq,
-   input wire 		            i_rf_ready,
+   output wire                o_rf_rreq,
+   output wire                o_rf_wreq,
+   input wire                 i_rf_ready,
    output wire [4+WITH_CSR:0] o_wreg0,
    output wire [4+WITH_CSR:0] o_wreg1,
-   output wire 		         o_wen0,
-   output wire 		         o_wen1,
-   output wire 		         o_wdata0,
-   output wire 		         o_wdata1,
+   output wire                o_wen0,
+   output wire                o_wen1,
+   output wire                o_wdata0,
+   output wire                o_wdata1,
    output wire [4+WITH_CSR:0] o_rreg0,
    output wire [4+WITH_CSR:0] o_rreg1,
-   input wire 		            i_rdata0,
-   input wire 		            i_rdata1,
+   input  wire                i_rdata0,
+   input  wire                i_rdata1,
 
    output wire [31:0] o_ibus_adr,
-   output wire 		 o_ibus_cyc,
-   input wire [31:0]  i_ibus_rdt,
-   input wire 		    i_ibus_ack,
+   output wire        o_ibus_cyc,
+   input  wire [31:0] i_ibus_rdt,
+   input  wire        i_ibus_ack,
    output wire [31:0] o_dbus_adr,
    output wire [31:0] o_dbus_dat,
    output wire [3:0]  o_dbus_sel,
-   output wire 		 o_dbus_we ,
-   output wire 		 o_dbus_cyc,
-   input wire [31:0]  i_dbus_rdt,
-   input wire 		    i_dbus_ack,
+   output wire        o_dbus_we ,
+   output wire        o_dbus_cyc,
+   input  wire [31:0] i_dbus_rdt,
+   input  wire        i_dbus_ack,
    //Extension
    output wire [ 2:0] o_ext_funct3,
    input  wire        i_ext_ready,
-   input wire  [31:0] i_ext_rd,
+   input  wire [31:0] i_ext_rd,
    output wire [31:0] o_ext_rs1,
    output wire [31:0] o_ext_rs2,
    //MDU
@@ -78,40 +78,40 @@ module serv_top
    wire [3:0] immdec_en;
 
    wire   sh_right;
-   wire 	 bne_or_bge;
-   wire 	 cond_branch;
-   wire 	 two_stage_op;
-   wire 	 e_op;
-   wire 	 ebreak;
-   wire 	 branch_op;
-   wire 	 shift_op;
-   wire 	 slt_or_branch;
-   wire 	 rd_op;
+   wire   bne_or_bge;
+   wire   cond_branch;
+   wire   two_stage_op;
+   wire   e_op;
+   wire   ebreak;
+   wire   branch_op;
+   wire   shift_op;
+   wire   slt_or_branch;
+   wire   rd_op;
    wire   mdu_op;
 
-   wire 	 rd_alu_en;
-   wire 	 rd_csr_en;
-   wire 	 rd_mem_en;
+   wire   rd_alu_en;
+   wire   rd_csr_en;
+   wire   rd_mem_en;
    wire   ctrl_rd;
    wire   alu_rd;
    wire   mem_rd;
    wire   csr_rd;
-   wire 	 mtval_pc;
+   wire   mtval_pc;
 
    wire   ctrl_pc_en;
    wire   jump;
    wire   jal_or_jalr;
    wire   utype;
-   wire 	 mret;
+   wire   mret;
    wire   imm;
-   wire 	 trap;
-   wire 	 pc_rel;
+   wire   trap;
+   wire   pc_rel;
    wire   iscomp;
 
    wire   init;
    wire   cnt_en;
-   wire 	 cnt0to3;
-   wire 	 cnt12to31;
+   wire   cnt0to3;
+   wire   cnt12to31;
    wire   cnt0;
    wire   cnt1;
    wire   cnt2;
@@ -120,15 +120,15 @@ module serv_top
    wire   cnt11;
    wire   cnt12;
 
-   wire 	 cnt_done;
+   wire   cnt_done;
 
-   wire 	 bufreg_en;
-   wire   bufreg_sh_signed;
-   wire 	 bufreg_rs1_en;
-   wire 	 bufreg_imm_en;
-   wire 	 bufreg_clr_lsb;
-   wire 	 bufreg_q;
-   wire 	 bufreg2_q;
+   wire        bufreg_en;
+   wire        bufreg_sh_signed;
+   wire        bufreg_rs1_en;
+   wire        bufreg_imm_en;
+   wire        bufreg_clr_lsb;
+   wire        bufreg_q;
+   wire        bufreg2_q;
    wire [31:0] dbus_rdt;
    wire        dbus_ack;
 
@@ -149,30 +149,30 @@ module serv_top
    wire        mem_signed;
    wire        mem_word;
    wire        mem_half;
-   wire [1:0] 	mem_bytecnt;
-   wire 	      sh_done;
-   wire 	      sh_done_r;
-   wire 	      byte_valid;
+   wire [1:0]  mem_bytecnt;
+   wire        sh_done;
+   wire        sh_done_r;
+   wire        byte_valid;
 
-   wire 	      mem_misalign;
+   wire        mem_misalign;
 
-   wire 	      bad_pc;
+   wire        bad_pc;
 
-   wire 	      csr_mstatus_en;
-   wire 	      csr_mie_en;
-   wire 	      csr_mcause_en;
-   wire [1:0]	csr_source;
-   wire 	      csr_imm;
-   wire 	      csr_d_sel;
-   wire 	      csr_en;
-   wire [1:0] 	csr_addr;
-   wire 	      csr_pc;
-   wire 	      csr_imm_en;
-   wire 	      csr_in;
-   wire 	      rf_csr_out;
-   wire 	      dbus_en;
+   wire        csr_mstatus_en;
+   wire        csr_mie_en;
+   wire        csr_mcause_en;
+   wire [1:0]  csr_source;
+   wire        csr_imm;
+   wire        csr_d_sel;
+   wire        csr_en;
+   wire [1:0]  csr_addr;
+   wire        csr_pc;
+   wire        csr_imm_en;
+   wire        csr_in;
+   wire        rf_csr_out;
+   wire        dbus_en;
 
-   wire 	      new_irq;
+   wire        new_irq;
 
    wire [1:0]  lsb;
 
@@ -183,6 +183,7 @@ module serv_top
    wire [31:0] wb_ibus_rdt;
    wire        wb_ibus_ack;
 
+   // C extension
    generate
       if (ALIGN) begin : gen_align
          serv_aligner  align (
@@ -198,7 +199,7 @@ module serv_top
             .o_wb_ibus_cyc(o_ibus_cyc),
             .i_wb_ibus_rdt(i_ibus_rdt),
             .i_wb_ibus_ack(i_ibus_ack)
-			);
+         );
       end else begin : gen_no_align
          assign  o_ibus_adr  = wb_ibus_adr;
          assign  o_ibus_cyc  = wb_ibus_cyc;
@@ -207,15 +208,16 @@ module serv_top
       end
    endgenerate
 
+   // C extension
    generate
       if (COMPRESSED) begin : gen_compressed
          serv_compdec compdec (
-            .i_clk(clk),
-            .i_instr(wb_ibus_rdt),
-            .i_ack(wb_ibus_ack),
-            .o_instr(i_wb_rdt),
+            .i_clk   (clk),
+            .i_instr (wb_ibus_rdt),
+            .i_ack   (wb_ibus_ack),
+            .o_instr (i_wb_rdt),
             .o_iscomp(iscomp)
-			);
+         );
       end else begin : gen_no_compressed
          assign i_wb_rdt =  wb_ibus_rdt;
          assign iscomp   =  1'b0;
@@ -339,7 +341,7 @@ module serv_top
       .o_csr_source       (csr_source),
       .o_csr_d_sel        (csr_d_sel),
       .o_csr_imm_en       (csr_imm_en),
-      .o_mtval_pc         (mtval_pc      ),
+      .o_mtval_pc         (mtval_pc),
       //To top
       .o_immdec_ctrl      (immdec_ctrl),
       .o_immdec_en        (immdec_en),
@@ -355,7 +357,7 @@ module serv_top
       .i_cnt_en     (cnt_en),
       .i_cnt_done   (cnt_done),
       //Control
-      .i_immdec_en        (immdec_en),
+      .i_immdec_en  (immdec_en),
       .i_csr_imm_en (csr_imm_en),
       .i_ctrl       (immdec_ctrl),
       .o_rd_addr    (rd_addr),
@@ -538,51 +540,51 @@ module serv_top
 
    generate
       if (|WITH_CSR) begin : gen_csr
-	 serv_csr
-	   #(.RESET_STRATEGY (RESET_STRATEGY))
-	 csr
-	   (
-	    .i_clk        (clk),
-	    .i_rst        (i_rst),
-	    //State
-	    .i_trig_irq   (wb_ibus_ack),
-	    .i_en         (cnt_en),
-	    .i_cnt0to3    (cnt0to3),
-	    .i_cnt3       (cnt3),
-	    .i_cnt7       (cnt7),
-	    .i_cnt11      (cnt11),
-	    .i_cnt12      (cnt12),
-	    .i_cnt_done   (cnt_done),
-	    .i_mem_op     (!mtval_pc),
-	    .i_mtip       (i_timer_irq),
-	    .i_trap       (trap),
-	    .o_new_irq    (new_irq),
-	    //Control
-	    .i_e_op       (e_op),
-	    .i_ebreak     (ebreak),
-	    .i_mem_cmd    (o_dbus_we),
-	    .i_mstatus_en (csr_mstatus_en),
-	    .i_mie_en     (csr_mie_en    ),
-	    .i_mcause_en  (csr_mcause_en ),
-	    .i_csr_source (csr_source),
-	    .i_mret       (mret),
-	    .i_csr_d_sel  (csr_d_sel),
-	    //Data
-	    .i_rf_csr_out (rf_csr_out),
-	    .o_csr_in     (csr_in),
-	    .i_csr_imm    (csr_imm),
-	    .i_rs1        (rs1),
-	    .o_q          (csr_rd));
+         serv_csr #(
+            .RESET_STRATEGY (RESET_STRATEGY)
+         ) csr (
+            .i_clk        (clk),
+            .i_rst        (i_rst),
+            //State
+            .i_trig_irq   (wb_ibus_ack),
+            .i_en         (cnt_en),
+            .i_cnt0to3    (cnt0to3),
+            .i_cnt3       (cnt3),
+            .i_cnt7       (cnt7),
+            .i_cnt11      (cnt11),
+            .i_cnt12      (cnt12),
+            .i_cnt_done   (cnt_done),
+            .i_mem_op     (!mtval_pc),
+            .i_mtip       (i_timer_irq),
+            .i_trap       (trap),
+            .o_new_irq    (new_irq),
+            //Control
+            .i_e_op       (e_op),
+            .i_ebreak     (ebreak),
+            .i_mem_cmd    (o_dbus_we),
+            .i_mstatus_en (csr_mstatus_en),
+            .i_mie_en     (csr_mie_en    ),
+            .i_mcause_en  (csr_mcause_en ),
+            .i_csr_source (csr_source),
+            .i_mret       (mret),
+            .i_csr_d_sel  (csr_d_sel),
+            //Data
+            .i_rf_csr_out (rf_csr_out),
+            .o_csr_in     (csr_in),
+            .i_csr_imm    (csr_imm),
+            .i_rs1        (rs1),
+            .o_q          (csr_rd)
+         );
       end else begin : gen_no_csr
-         assign csr_in = 1'b0;
-         assign csr_rd = 1'b0;
+         assign csr_in  = 1'b0;
+         assign csr_rd  = 1'b0;
          assign new_irq = 1'b0;
       end
    endgenerate
 
 
 `ifdef RISCV_FORMAL
-   reg [31:0] 	 pc = RESET_PC;
+   reg [31:0]     pc = RESET_PC;
 
    wire rs_en = two_stage_op ? init : ctrl_pc_en;
 
@@ -593,7 +595,7 @@ module serv_top
 
       /* Get instruction word when it's fetched from ibus */
       if (wb_ibus_cyc & wb_ibus_ack)
-	rvfi_insn <= i_wb_rdt;
+   rvfi_insn <= i_wb_rdt;
 
       /* Store data written to rd */
       if (o_wen0)
@@ -601,10 +603,10 @@ module serv_top
 
       if (cnt_done & ctrl_pc_en) begin
          rvfi_pc_rdata <= pc;
-	 if (!(rd_en & (|rd_addr))) begin
-	   rvfi_rd_addr <= 5'd0;
-	   rvfi_rd_wdata <= 32'd0;
-	 end
+    if (!(rd_en & (|rd_addr))) begin
+      rvfi_rd_addr <= 5'd0;
+      rvfi_rd_wdata <= 32'd0;
+    end
       end
       rvfi_trap <= trap;
       if (rvfi_valid) begin
@@ -621,9 +623,9 @@ module serv_top
       /* RS1 not valid during J, U instructions (immdec_en[1]) */
       /* RS2 not valid during I, J, U instructions (immdec_en[2]) */
       if (i_rf_ready) begin
-	 rvfi_rs1_addr <= !immdec_en[1] ? rs1_addr : 5'd0;
+    rvfi_rs1_addr <= !immdec_en[1] ? rs1_addr : 5'd0;
          rvfi_rs2_addr <= !immdec_en[2] /*rs2_valid*/ ? rs2_addr : 5'd0;
-	 rvfi_rd_addr  <= rd_addr;
+    rvfi_rd_addr  <= rd_addr;
       end
       if (rs_en) begin
          rvfi_rs1_rdata <= {!immdec_en[1] & rs1,rvfi_rs1_rdata[31:1]};

@@ -7,9 +7,32 @@ module top_test ();
    
    bit SystemClock;
    
+   logic [31:0] mdu_rs1;
+   logic [31:0] mdu_rs2;
+   logic [2:0]  mdu_op;
+   logic        mdu_valid;
+   logic        mdu_ready;
+   logic [31:0] mdu_rd;
+   
+   assign top_io.o_mdu_valid  = mdu_valid;
+   assign top_io.i_ext_ready  = mdu_ready;
+   assign top_io.i_ext_rd     = mdu_rd;
+   assign top_io.o_ext_funct3 = mdu_op;
+   assign top_io.o_ext_rs2    = mdu_rs2;
+   assign top_io.o_ext_rs1    = mdu_rs1;
+   
+   assign mdu_io.i_mdu_rs1   = mdu_rs1;
+   assign mdu_io.i_mdu_rs2   = mdu_rs2;
+   assign mdu_io.i_mdu_op    = mdu_op;
+   assign mdu_io.i_mdu_valid = mdu_valid;
+   assign mdu_io.o_mdu_ready = mdu_ready;
+   assign mdu_io.o_mdu_rd    = mdu_rd;
+   
    reg [7:0] time_out;
    
    serv_if top_io (SystemClock);
+   
+   mdu_if mdu_io (SystemClock);
    
    test_program test (top_io);
    
@@ -17,7 +40,7 @@ module top_test ();
       .RESET_PC      (32'd0),
       .COMPRESSED    (0),
       .ALIGN         (1'b0),
-      .MDU           (0),
+      .MDU           (1),
       .PRE_REGISTER  (1),
       .RESET_STRATEGY("MINI"),
       .WITH_CSR      (0),
@@ -64,13 +87,26 @@ module top_test ();
       .i_dbus_ack    (top_io.i_dbus_ack),
 
       // Extension
-      .o_ext_rs1     (),
-      .o_ext_rs2     (),
-      .o_ext_funct3  (),
-      .i_ext_rd      (32'b0),
-      .i_ext_ready   (1'b0),
+      .o_ext_rs1     (mdu_rs1),
+      .o_ext_rs2     (mdu_rs2),
+      .o_ext_funct3  (mdu_op),
+      .i_ext_rd      (mdu_rd),
+      .i_ext_ready   (mdu_ready),
       // MDU
-      .o_mdu_valid   ()
+      .o_mdu_valid   (mdu_valid)
+   );
+   
+   mdu_top #(
+      .WIDTH(32)
+   ) mdu_dut (
+      .i_clk      (SystemClock),
+      .i_rst      (top_io.i_rst),
+      .i_mdu_rs1  (mdu_rs1),
+      .i_mdu_rs2  (mdu_rs2),
+      .i_mdu_op   (mdu_op),
+      .i_mdu_valid(mdu_valid),
+      .o_mdu_ready(mdu_ready),
+      .o_mdu_rd   (mdu_rd)
    );
    
    always #(CYCLE / 2) SystemClock = ~SystemClock;

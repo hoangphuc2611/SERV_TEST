@@ -1,0 +1,19 @@
+addi x1, x0, 2047
+addi x2, x0, -2047 // 2049
+addi x3, x0, -2 // 4094
+addi x4, x0, -2046 // 2050
+addi x5, x0, 2
+mul    x10, x2, x2
+mulh   x11, x2, x2
+mulhsu x12, x2, x2
+mulhu  x13, x2, x2
+div    x14, x4, x3
+div    x15, x4, x5
+divu   x16, x4, x3
+divu   x17, x4, x5
+rem    x18, x1, x5
+rem    x19, x2, x5
+rem    x20, x1, x3
+rem    x21, x2, x3
+remu   x22, x2, x5
+remu   x23, x3, x2

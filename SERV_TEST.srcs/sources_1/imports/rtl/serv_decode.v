@@ -65,10 +65,10 @@ module serv_decode
 
    reg [4:0] opcode;
    reg [2:0] funct3;
-   reg        op20;
-   reg        op21;
-   reg        op22;
-   reg        op26;
+   reg       op20;
+   reg       op21;
+   reg       op22;
+   reg       op26;
 
    reg       imm25;
    reg       imm30;
@@ -76,8 +76,8 @@ module serv_decode
    wire co_mdu_op     = MDU & (opcode == 5'b01100) & imm25;
 
    wire co_two_stage_op =
-	~opcode[2] | (funct3[0] & ~funct3[1] & ~opcode[0] & ~opcode[4]) |
-	(funct3[1] & ~funct3[2] & ~opcode[0] & ~opcode[4]) | co_mdu_op;
+   ~opcode[2] | (funct3[0] & ~funct3[1] & ~opcode[0] & ~opcode[4]) |
+   (funct3[1] & ~funct3[2] & ~opcode[0] & ~opcode[4]) | co_mdu_op;
    wire co_shift_op = (opcode[2] & ~funct3[1]) & !co_mdu_op;
    wire co_slt_or_branch = (opcode[4] | (funct3[1] & opcode[2]) | (imm30 & opcode[2] & opcode[3] & ~funct3[2])) & !co_mdu_op;
    wire co_branch_op = opcode[4];
@@ -254,7 +254,7 @@ module serv_decode
             o_cond_branch      = co_cond_branch;
             o_dbus_en          = co_dbus_en;
             o_mtval_pc         = co_mtval_pc;
-	    o_two_stage_op     = co_two_stage_op;
+       o_two_stage_op     = co_two_stage_op;
             o_e_op             = co_e_op;
             o_ebreak           = co_ebreak;
             o_branch_op        = co_branch_op;

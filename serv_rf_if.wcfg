@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top_test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="11.664315 us"></ZoomEndTime>
+      <Cursor1Time time="5.827629 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="231"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="45" />
+   <wvobject fp_name="/top_test/SystemClock" type="logic">
+      <obj_property name="ElementShortName">SystemClock</obj_property>
+      <obj_property name="ObjectShortName">SystemClock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/top_io/o_ibus_cyc" type="logic">
+      <obj_property name="ElementShortName">o_ibus_cyc</obj_property>
+      <obj_property name="ObjectShortName">o_ibus_cyc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/top_io/i_ibus_ack" type="logic">
+      <obj_property name="ElementShortName">i_ibus_ack</obj_property>
+      <obj_property name="ObjectShortName">i_ibus_ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/test/ibus_dat" type="array">
+      <obj_property name="ElementShortName">ibus_dat[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ibus_dat[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/test/ibus_adr" type="array">
+      <obj_property name="ElementShortName">ibus_adr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ibus_adr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/i_cnt_en" type="logic">
+      <obj_property name="ElementShortName">i_cnt_en</obj_property>
+      <obj_property name="ObjectShortName">i_cnt_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/o_wreg0" type="array">
+      <obj_property name="ElementShortName">o_wreg0[4:0]</obj_property>
+      <obj_property name="ObjectShortName">o_wreg0[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/o_wreg1" type="array">
+      <obj_property name="ElementShortName">o_wreg1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">o_wreg1[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/o_wen0" type="logic">
+      <obj_property name="ElementShortName">o_wen0</obj_property>
+      <obj_property name="ObjectShortName">o_wen0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/o_wen1" type="logic">
+      <obj_property name="ElementShortName">o_wen1</obj_property>
+      <obj_property name="ObjectShortName">o_wen1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/o_wdata0" type="array">
+      <obj_property name="ElementShortName">o_wdata0[0:0]</obj_property>
+      <obj_property name="ObjectShortName">o_wdata0[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/o_wdata1" type="array">
+      <obj_property name="ElementShortName">o_wdata1[0:0]</obj_property>
+      <obj_property name="ObjectShortName">o_wdata1[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/o_rreg0" type="array">
+      <obj_property name="ElementShortName">o_rreg0[4:0]</obj_property>
+      <obj_property name="ObjectShortName">o_rreg0[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/o_rreg1" type="array">
+      <obj_property name="ElementShortName">o_rreg1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">o_rreg1[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/i_rdata0" type="array">
+      <obj_property name="ElementShortName">i_rdata0[0:0]</obj_property>
+      <obj_property name="ObjectShortName">i_rdata0[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/i_rdata1" type="array">
+      <obj_property name="ElementShortName">i_rdata1[0:0]</obj_property>
+      <obj_property name="ObjectShortName">i_rdata1[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/i_trap" type="logic">
+      <obj_property name="ElementShortName">i_trap</obj_property>
+      <obj_property name="ObjectShortName">i_trap</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/i_mret" type="logic">
+      <obj_property name="ElementShortName">i_mret</obj_property>
+      <obj_property name="ObjectShortName">i_mret</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/i_mepc" type="array">
+      <obj_property name="ElementShortName">i_mepc[0:0]</obj_property>
+      <obj_property name="ObjectShortName">i_mepc[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/i_mtval_pc" type="logic">
+      <obj_property name="ElementShortName">i_mtval_pc</obj_property>
+      <obj_property name="ObjectShortName">i_mtval_pc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/i_bufreg_q" type="array">
+      <obj_property name="ElementShortName">i_bufreg_q[0:0]</obj_property>
+      <obj_property name="ObjectShortName">i_bufreg_q[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/i_bad_pc" type="array">
+      <obj_property name="ElementShortName">i_bad_pc[0:0]</obj_property>
+      <obj_property name="ObjectShortName">i_bad_pc[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/o_csr_pc" type="array">
+      <obj_property name="ElementShortName">o_csr_pc[0:0]</obj_property>
+      <obj_property name="ObjectShortName">o_csr_pc[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/i_csr_en" type="logic">
+      <obj_property name="ElementShortName">i_csr_en</obj_property>
+      <obj_property name="ObjectShortName">i_csr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/i_csr_addr" type="array">
+      <obj_property name="ElementShortName">i_csr_addr[1:0]</obj_property>
+      <obj_property name="ObjectShortName">i_csr_addr[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/i_csr" type="array">
+      <obj_property name="ElementShortName">i_csr[0:0]</obj_property>
+      <obj_property name="ObjectShortName">i_csr[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/o_csr" type="array">
+      <obj_property name="ElementShortName">o_csr[0:0]</obj_property>
+      <obj_property name="ObjectShortName">o_csr[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/i_rd_wen" type="logic">
+      <obj_property name="ElementShortName">i_rd_wen</obj_property>
+      <obj_property name="ObjectShortName">i_rd_wen</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/i_rd_waddr" type="array">
+      <obj_property name="ElementShortName">i_rd_waddr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">i_rd_waddr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/i_ctrl_rd" type="array">
+      <obj_property name="ElementShortName">i_ctrl_rd[0:0]</obj_property>
+      <obj_property name="ObjectShortName">i_ctrl_rd[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/i_alu_rd" type="array">
+      <obj_property name="ElementShortName">i_alu_rd[0:0]</obj_property>
+      <obj_property name="ObjectShortName">i_alu_rd[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/i_rd_alu_en" type="logic">
+      <obj_property name="ElementShortName">i_rd_alu_en</obj_property>
+      <obj_property name="ObjectShortName">i_rd_alu_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/i_csr_rd" type="array">
+      <obj_property name="ElementShortName">i_csr_rd[0:0]</obj_property>
+      <obj_property name="ObjectShortName">i_csr_rd[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/i_rd_csr_en" type="logic">
+      <obj_property name="ElementShortName">i_rd_csr_en</obj_property>
+      <obj_property name="ObjectShortName">i_rd_csr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/i_mem_rd" type="array">
+      <obj_property name="ElementShortName">i_mem_rd[0:0]</obj_property>
+      <obj_property name="ObjectShortName">i_mem_rd[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/i_rd_mem_en" type="logic">
+      <obj_property name="ElementShortName">i_rd_mem_en</obj_property>
+      <obj_property name="ObjectShortName">i_rd_mem_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/i_rs1_raddr" type="array">
+      <obj_property name="ElementShortName">i_rs1_raddr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">i_rs1_raddr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/o_rs1" type="array">
+      <obj_property name="ElementShortName">o_rs1[0:0]</obj_property>
+      <obj_property name="ObjectShortName">o_rs1[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/i_rs2_raddr" type="array">
+      <obj_property name="ElementShortName">i_rs2_raddr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">i_rs2_raddr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/o_rs2" type="array">
+      <obj_property name="ElementShortName">o_rs2[0:0]</obj_property>
+      <obj_property name="ObjectShortName">o_rs2[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/rd_wen" type="logic">
+      <obj_property name="ElementShortName">rd_wen</obj_property>
+      <obj_property name="ObjectShortName">rd_wen</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/\gen_no_csr.rd " type="array">
+      <obj_property name="ElementShortName">\gen_no_csr.rd [0:0]</obj_property>
+      <obj_property name="ObjectShortName">\gen_no_csr.rd [0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/WITH_CSR" type="array">
+      <obj_property name="ElementShortName">WITH_CSR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WITH_CSR[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/W" type="array">
+      <obj_property name="ElementShortName">W[31:0]</obj_property>
+      <obj_property name="ObjectShortName">W[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/rf_if/B" type="array">
+      <obj_property name="ElementShortName">B[31:0]</obj_property>
+      <obj_property name="ObjectShortName">B[31:0]</obj_property>
+   </wvobject>
+</wave_config>

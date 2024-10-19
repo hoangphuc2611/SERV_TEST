@@ -3,19 +3,19 @@ module serv_bufreg #(
       parameter W = 1,
       parameter B = W-1
 )(
-   input  wire 	    i_clk,
+   input  wire        i_clk,
    //State
-   input  wire 	    i_cnt0,
-   input  wire 	    i_cnt1,
-   input  wire 	    i_en,
-   input  wire 	    i_init,
+   input  wire        i_cnt0,
+   input  wire        i_cnt1,
+   input  wire        i_en,
+   input  wire        i_init,
    input  wire        i_mdu_op,
    output wire [1:0]  o_lsb,
    //Control
-   input  wire 	    i_rs1_en,
-   input  wire 	    i_imm_en,
-   input  wire 	    i_clr_lsb,
-   input  wire 	    i_sh_signed,
+   input  wire        i_rs1_en,
+   input  wire        i_imm_en,
+   input  wire        i_clr_lsb,
+   input  wire        i_sh_signed,
    //Data
    input  wire [B:0]  i_rs1,
    input  wire [B:0]  i_imm,
@@ -26,11 +26,11 @@ module serv_bufreg #(
    output wire [31:0] o_ext_rs1
 );
 
-   wire		          c; // carry
-   wire [B:0]	       q; // sum of rs1 and imm and carry
-   reg  [B:0]	       c_r;
-   reg  [31:0]	       data;
-   wire [B:0]	       clr_lsb;
+   wire        c; // carry
+   wire [B:0]  q; // sum of rs1 and imm and carry
+   reg  [B:0]  c_r;
+   reg  [31:0] data;
+   wire [B:0]  clr_lsb;
 
    assign clr_lsb[0] = i_cnt0 & i_clr_lsb;
 
@@ -58,7 +58,6 @@ module serv_bufreg #(
          assign o_q = data[0] & {W{i_en}};
       end
    endgenerate
-
 
    assign o_dbus_adr = {data[31:2], 2'b00};
    assign o_ext_rs1  = data;

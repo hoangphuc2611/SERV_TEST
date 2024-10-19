@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top_test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="25,005.041 ns"></ZoomStartTime>
+      <ZoomEndTime time="25,043.342 ns"></ZoomEndTime>
+      <Cursor1Time time="25,105.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="304"></NameColumnWidth>
+      <ValueColumnWidth column_width="297"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="18" />
+   <wvobject fp_name="/top_test/dut/rf_ram/i_clk" type="logic">
+      <obj_property name="ElementShortName">i_clk</obj_property>
+      <obj_property name="ObjectShortName">i_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/top_io/o_ibus_cyc" type="logic">
+      <obj_property name="ElementShortName">o_ibus_cyc</obj_property>
+      <obj_property name="ObjectShortName">o_ibus_cyc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/top_io/i_ibus_ack" type="logic">
+      <obj_property name="ElementShortName">i_ibus_ack</obj_property>
+      <obj_property name="ObjectShortName">i_ibus_ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/test/ibus_dat" type="array">
+      <obj_property name="ElementShortName">ibus_dat[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ibus_dat[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/test/ibus_adr" type="array">
+      <obj_property name="ElementShortName">ibus_adr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ibus_adr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/rf_ram/i_waddr" type="array">
+      <obj_property name="ElementShortName">i_waddr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">i_waddr[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/rf_ram/i_wdata" type="array">
+      <obj_property name="ElementShortName">i_wdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_wdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/rf_ram/i_wen" type="logic">
+      <obj_property name="ElementShortName">i_wen</obj_property>
+      <obj_property name="ObjectShortName">i_wen</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/rf_ram/i_raddr" type="array">
+      <obj_property name="ElementShortName">i_raddr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">i_raddr[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/rf_ram/i_ren" type="logic">
+      <obj_property name="ElementShortName">i_ren</obj_property>
+      <obj_property name="ObjectShortName">i_ren</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/rf_ram/o_rdata" type="array">
+      <obj_property name="ElementShortName">o_rdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_rdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/rf_ram/memory" type="array">
+      <obj_property name="ElementShortName">memory[0:31][31:0]</obj_property>
+      <obj_property name="ObjectShortName">memory[0:31][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/rf_ram/rdata" type="array">
+      <obj_property name="ElementShortName">rdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/rf_ram/regzero" type="logic">
+      <obj_property name="ElementShortName">regzero</obj_property>
+      <obj_property name="ObjectShortName">regzero</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/rf_ram/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/rf_ram/width" type="array">
+      <obj_property name="ElementShortName">width[31:0]</obj_property>
+      <obj_property name="ObjectShortName">width[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/rf_ram/csr_regs" type="array">
+      <obj_property name="ElementShortName">csr_regs[31:0]</obj_property>
+      <obj_property name="ObjectShortName">csr_regs[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/rf_ram/depth" type="array">
+      <obj_property name="ElementShortName">depth[31:0]</obj_property>
+      <obj_property name="ObjectShortName">depth[31:0]</obj_property>
+   </wvobject>
+</wave_config>

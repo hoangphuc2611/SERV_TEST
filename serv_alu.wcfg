@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top_test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="8.016020 us"></ZoomEndTime>
+      <Cursor1Time time="3.568489 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="304"></NameColumnWidth>
+      <ValueColumnWidth column_width="297"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="31" />
+   <wvobject fp_name="/top_test/dut/cpu/alu/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/test/stage_count" type="array">
+      <obj_property name="ElementShortName">stage_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">stage_count[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/top_io/o_ibus_cyc" type="logic">
+      <obj_property name="ElementShortName">o_ibus_cyc</obj_property>
+      <obj_property name="ObjectShortName">o_ibus_cyc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/top_io/i_ibus_ack" type="logic">
+      <obj_property name="ElementShortName">i_ibus_ack</obj_property>
+      <obj_property name="ObjectShortName">i_ibus_ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/test/ibus_dat" type="array">
+      <obj_property name="ElementShortName">ibus_dat[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ibus_dat[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/test/ibus_adr" type="array">
+      <obj_property name="ElementShortName">ibus_adr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ibus_adr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/i_en" type="logic">
+      <obj_property name="ElementShortName">i_en</obj_property>
+      <obj_property name="ObjectShortName">i_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/i_cnt0" type="logic">
+      <obj_property name="ElementShortName">i_cnt0</obj_property>
+      <obj_property name="ObjectShortName">i_cnt0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/o_cmp" type="logic">
+      <obj_property name="ElementShortName">o_cmp</obj_property>
+      <obj_property name="ObjectShortName">o_cmp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/i_sub" type="logic">
+      <obj_property name="ElementShortName">i_sub</obj_property>
+      <obj_property name="ObjectShortName">i_sub</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/i_bool_op" type="array">
+      <obj_property name="ElementShortName">i_bool_op[1:0]</obj_property>
+      <obj_property name="ObjectShortName">i_bool_op[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/i_cmp_eq" type="logic">
+      <obj_property name="ElementShortName">i_cmp_eq</obj_property>
+      <obj_property name="ObjectShortName">i_cmp_eq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/i_cmp_sig" type="logic">
+      <obj_property name="ElementShortName">i_cmp_sig</obj_property>
+      <obj_property name="ObjectShortName">i_cmp_sig</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/i_rd_sel" type="array">
+      <obj_property name="ElementShortName">i_rd_sel[2:0]</obj_property>
+      <obj_property name="ObjectShortName">i_rd_sel[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/i_rs1" type="array">
+      <obj_property name="ElementShortName">i_rs1[0:0]</obj_property>
+      <obj_property name="ObjectShortName">i_rs1[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/i_op_b" type="array">
+      <obj_property name="ElementShortName">i_op_b[0:0]</obj_property>
+      <obj_property name="ObjectShortName">i_op_b[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/i_buf" type="array">
+      <obj_property name="ElementShortName">i_buf[0:0]</obj_property>
+      <obj_property name="ObjectShortName">i_buf[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/o_rd" type="array">
+      <obj_property name="ElementShortName">o_rd[0:0]</obj_property>
+      <obj_property name="ObjectShortName">o_rd[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/result_add" type="array">
+      <obj_property name="ElementShortName">result_add[0:0]</obj_property>
+      <obj_property name="ObjectShortName">result_add[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/result_slt" type="array">
+      <obj_property name="ElementShortName">result_slt[0:0]</obj_property>
+      <obj_property name="ObjectShortName">result_slt[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/cmp_r" type="logic">
+      <obj_property name="ElementShortName">cmp_r</obj_property>
+      <obj_property name="ObjectShortName">cmp_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/add_cy" type="logic">
+      <obj_property name="ElementShortName">add_cy</obj_property>
+      <obj_property name="ObjectShortName">add_cy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/add_cy_r" type="array">
+      <obj_property name="ElementShortName">add_cy_r[0:0]</obj_property>
+      <obj_property name="ObjectShortName">add_cy_r[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/rs1_sx" type="logic">
+      <obj_property name="ElementShortName">rs1_sx</obj_property>
+      <obj_property name="ObjectShortName">rs1_sx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/op_b_sx" type="logic">
+      <obj_property name="ElementShortName">op_b_sx</obj_property>
+      <obj_property name="ObjectShortName">op_b_sx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/add_b" type="array">
+      <obj_property name="ElementShortName">add_b[0:0]</obj_property>
+      <obj_property name="ObjectShortName">add_b[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/result_lt" type="logic">
+      <obj_property name="ElementShortName">result_lt</obj_property>
+      <obj_property name="ObjectShortName">result_lt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/result_eq" type="logic">
+      <obj_property name="ElementShortName">result_eq</obj_property>
+      <obj_property name="ObjectShortName">result_eq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/result_bool" type="array">
+      <obj_property name="ElementShortName">result_bool[0:0]</obj_property>
+      <obj_property name="ObjectShortName">result_bool[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/W" type="array">
+      <obj_property name="ElementShortName">W[31:0]</obj_property>
+      <obj_property name="ObjectShortName">W[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/alu/B" type="array">
+      <obj_property name="ElementShortName">B[31:0]</obj_property>
+      <obj_property name="ObjectShortName">B[31:0]</obj_property>
+   </wvobject>
+</wave_config>

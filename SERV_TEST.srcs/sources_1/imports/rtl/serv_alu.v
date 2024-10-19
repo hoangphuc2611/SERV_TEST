@@ -7,14 +7,14 @@ module serv_alu
   (
    input wire 	    clk,
    //State
-   input wire 	    i_en,
-   input wire 	    i_cnt0,
-   output wire 	    o_cmp,
+   input  wire 	  i_en,
+   input  wire 	  i_cnt0,
+   output wire 	  o_cmp,
    //Control
-   input wire 	    i_sub,
+   input wire 	     i_sub,
    input wire [1:0] i_bool_op,
-   input wire 	    i_cmp_eq,
-   input wire 	    i_cmp_sig,
+   input wire 	     i_cmp_eq,
+   input wire 	     i_cmp_sig,
    input wire [2:0] i_rd_sel,
    //Data
    input wire  [B:0] i_rs1,

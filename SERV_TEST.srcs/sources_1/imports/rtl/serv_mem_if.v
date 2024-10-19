@@ -2,22 +2,22 @@
 module serv_mem_if
   #(
     parameter [0:0] WITH_CSR = 1,
-    parameter	    W = 1,
-    parameter	    B = W-1
+    parameter       W = 1,
+    parameter       B = W-1
   )
   (
-   input wire 	     i_clk,
+   input wire         i_clk,
    //State
    input wire [1:0]  i_bytecnt,
    input wire [1:0]  i_lsb,
-   output wire 	     o_byte_valid,
-   output wire 	     o_misalign,
+   output wire         o_byte_valid,
+   output wire         o_misalign,
    //Control
-   input wire 	     i_signed,
-   input wire 	     i_word,
-   input wire 	     i_half,
+   input wire         i_signed,
+   input wire         i_word,
+   input wire         i_half,
    //MDU
-   input wire 	     i_mdu_op,
+   input wire         i_mdu_op,
    //Data
    input wire [B:0] i_bufreg2_q,
    output wire [B:0] o_rd,
@@ -42,10 +42,10 @@ module serv_mem_if
        (!i_bytecnt[0] & !i_lsb[1]);
 
    wire dat_valid =
-	i_mdu_op |
-	i_word |
-	(i_bytecnt == 2'b00) |
-	(i_half & !i_bytecnt[1]);
+   i_mdu_op |
+   i_word |
+   (i_bytecnt == 2'b00) |
+   (i_half & !i_bytecnt[1]);
 
    assign o_rd = dat_valid ? i_bufreg2_q : {W{i_signed & signbit}};
 

@@ -15,7 +15,7 @@ module serv_immdec
    output wire [4:0] o_rs2_addr,
    //Data
    output wire 	   o_csr_imm,
-   output wire 	   o_imm,
+   output wire 	   o_imm,   
    //External
    input wire 	      i_wb_en,
    input wire [31:7] i_wb_rdt

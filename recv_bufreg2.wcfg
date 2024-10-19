@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="18,947.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="19,135.001 ns"></ZoomEndTime>
-      <Cursor1Time time="20,705.000 ns"></Cursor1Time>
+      <ZoomStartTime time="9,520.500 ns"></ZoomStartTime>
+      <ZoomEndTime time="10,726.001 ns"></ZoomEndTime>
+      <Cursor1Time time="10,525.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="304"></NameColumnWidth>
-      <ValueColumnWidth column_width="301"></ValueColumnWidth>
+      <ValueColumnWidth column_width="285"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="26" />
+   <WVObjectSize size="25" />
    <wvobject fp_name="/top_test/dut/cpu/bufreg2/i_clk" type="logic">
       <obj_property name="ElementShortName">i_clk</obj_property>
       <obj_property name="ObjectShortName">i_clk</obj_property>
@@ -28,10 +28,6 @@
       <obj_property name="ElementShortName">stage_count[31:0]</obj_property>
       <obj_property name="ObjectShortName">stage_count[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_test/dut/o_ibus_adr" type="array">
-      <obj_property name="ElementShortName">o_ibus_adr[31:0]</obj_property>
-      <obj_property name="ObjectShortName">o_ibus_adr[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/top_test/dut/o_ibus_cyc" type="logic">
       <obj_property name="ElementShortName">o_ibus_cyc</obj_property>
@@ -104,6 +100,7 @@
    <wvobject fp_name="/top_test/dut/cpu/bufreg2/o_dat" type="array">
       <obj_property name="ElementShortName">o_dat[31:0]</obj_property>
       <obj_property name="ObjectShortName">o_dat[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/top_test/dut/cpu/bufreg2/i_load" type="logic">
       <obj_property name="ElementShortName">i_load</obj_property>
@@ -120,7 +117,6 @@
    <wvobject fp_name="/top_test/dut/cpu/bufreg2/dat" type="array">
       <obj_property name="ElementShortName">dat[31:0]</obj_property>
       <obj_property name="ObjectShortName">dat[31:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/top_test/dut/cpu/bufreg2/dat_shamt" type="array">
       <obj_property name="ElementShortName">dat_shamt[5:0]</obj_property>

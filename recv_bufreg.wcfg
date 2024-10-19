@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="20,205.535 ns"></ZoomStartTime>
-      <ZoomEndTime time="20,252.536 ns"></ZoomEndTime>
-      <Cursor1Time time="20,685.000 ns"></Cursor1Time>
+      <ZoomStartTime time="2,834.900 ns"></ZoomStartTime>
+      <ZoomEndTime time="3,315.501 ns"></ZoomEndTime>
+      <Cursor1Time time="2,991.500 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="304"></NameColumnWidth>
-      <ValueColumnWidth column_width="301"></ValueColumnWidth>
+      <ValueColumnWidth column_width="293"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="31" />
    <wvobject fp_name="/top_test/dut/cpu/bufreg/i_clk" type="logic">
@@ -108,6 +108,7 @@
    <wvobject fp_name="/top_test/dut/cpu/bufreg/o_ext_rs1" type="array">
       <obj_property name="ElementShortName">o_ext_rs1[31:0]</obj_property>
       <obj_property name="ObjectShortName">o_ext_rs1[31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/top_test/dut/cpu/bufreg/c" type="logic">
       <obj_property name="ElementShortName">c</obj_property>

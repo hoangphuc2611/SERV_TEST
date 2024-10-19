@@ -6,67 +6,67 @@ module serv_state
     parameter       W = 1
   )
   (
-   input  wire 	   i_clk,
-   input  wire 	   i_rst,
+   input  wire       i_clk,
+   input  wire       i_rst,
    //State
    input  wire       i_new_irq,
    input  wire       i_alu_cmp,
-   output wire 	   o_init,
-   output wire	      o_cnt_en,
-   output wire 	   o_cnt0to3,
-   output wire 	   o_cnt12to31,
-   output wire 	   o_cnt0,
-   output wire 	   o_cnt1,
-   output wire 	   o_cnt2,
-   output wire 	   o_cnt3,
-   output wire 	   o_cnt7,
-   output wire 	   o_cnt11,
-   output wire 	   o_cnt12,
-   output wire 	   o_cnt_done,
-   output wire 	   o_bufreg_en,
-   output wire 	   o_ctrl_pc_en,
-   output reg 	      o_ctrl_jump,
-   output wire 	   o_ctrl_trap,
-   input wire 	      i_ctrl_misalign,
-   input wire 	      i_sh_done,
-   input wire 	      i_sh_done_r,
+   output wire       o_init,
+   output wire       o_cnt_en,
+   output wire       o_cnt0to3,
+   output wire       o_cnt12to31,
+   output wire       o_cnt0,
+   output wire       o_cnt1,
+   output wire       o_cnt2,
+   output wire       o_cnt3,
+   output wire       o_cnt7,
+   output wire       o_cnt11,
+   output wire       o_cnt12,
+   output wire       o_cnt_done,
+   output wire       o_bufreg_en,
+   output wire       o_ctrl_pc_en,
+   output reg        o_ctrl_jump,
+   output wire       o_ctrl_trap,
+   input  wire       i_ctrl_misalign,
+   input  wire       i_sh_done,
+   input  wire       i_sh_done_r,
    output wire [1:0] o_mem_bytecnt,
-   input wire 	      i_mem_misalign,
+   input  wire       i_mem_misalign,
    //Control
-   input wire 	     i_bne_or_bge,
-   input wire 	     i_cond_branch,
-   input wire 	     i_dbus_en,
-   input wire 	     i_two_stage_op,
-   input wire 	     i_branch_op,
-   input wire 	     i_shift_op,
-   input wire 	     i_sh_right,
-   input wire 	     i_slt_or_branch,
-   input wire 	     i_e_op,
-   input wire 	     i_rd_op,
+   input wire        i_bne_or_bge,
+   input wire        i_cond_branch,
+   input wire        i_dbus_en,
+   input wire        i_two_stage_op,
+   input wire        i_branch_op,
+   input wire        i_shift_op,
+   input wire        i_sh_right,
+   input wire        i_slt_or_branch,
+   input wire        i_e_op,
+   input wire        i_rd_op,
    //MDU
-   input wire 	     i_mdu_op,
-   output wire 	     o_mdu_valid,
+   input  wire       i_mdu_op,
+   output wire       o_mdu_valid,
    //Extension
-   input wire 	     i_mdu_ready,
+   input wire        i_mdu_ready,
    //External
-   output wire 	     o_dbus_cyc,
-   input wire 	     i_dbus_ack,
-   output wire 	     o_ibus_cyc,
-   input wire 	     i_ibus_ack,
+   output wire       o_dbus_cyc,
+   input  wire       i_dbus_ack,
+   output wire       o_ibus_cyc,
+   input  wire       i_ibus_ack,
    //RF Interface
-   output wire 	     o_rf_rreq,
-   output wire 	     o_rf_wreq,
-   input wire 	     i_rf_ready,
-   output wire 	     o_rf_rd_en);
+   output wire       o_rf_rreq,
+   output wire       o_rf_wreq,
+   input  wire       i_rf_ready,
+   output wire       o_rf_rd_en);
 
-   reg 	stage_two_req;
-   reg 	init_done;
+   reg  stage_two_req;
+   reg  init_done;
    wire misalign_trap_sync;
 
    reg [4:2] o_cnt;
    wire [3:0] cnt_r;
 
-   reg 	     ibus_cyc;
+   reg         ibus_cyc;
    //Update PC in RUN or TRAP states
    assign o_ctrl_pc_en  = o_cnt_en & !o_init;
 
@@ -96,9 +96,9 @@ module serv_state
    //Prepare RF for writes when everything is ready to enter stage two
    // and the first stage didn't cause a misalign exception
    assign o_rf_wreq = !misalign_trap_sync & !o_cnt_en & init_done &
-	   	      ((i_shift_op & (i_sh_done | !i_sh_right)) |
-	   	       i_dbus_ack | (MDU & i_mdu_ready) |
-	   	       i_slt_or_branch);
+               ((i_shift_op & (i_sh_done | !i_sh_right)) |
+                i_dbus_ack | (MDU & i_mdu_ready) |
+                i_slt_or_branch);
 
    assign o_dbus_cyc = !o_cnt_en & init_done & i_dbus_en & !i_mem_misalign;
 
@@ -138,22 +138,22 @@ module serv_state
       //3. When i_ibus_ack, a new instruction is fetched and o_ibus_cyc gets
       //   deasserted to finish the transaction
       if (i_ibus_ack | o_cnt_done | i_rst)
-	ibus_cyc <= o_ctrl_pc_en | i_rst;
+   ibus_cyc <= o_ctrl_pc_en | i_rst;
 
       if (o_cnt_done) begin
-	 init_done <= o_init & !init_done;
-	 o_ctrl_jump <= o_init & take_branch;
+    init_done <= o_init & !init_done;
+    o_ctrl_jump <= o_init & take_branch;
       end
 
       //Need a strobe for the first cycle in the IDLE state after INIT
       stage_two_req <= o_cnt_done & o_init;
 
       if (i_rst) begin
-	 if (RESET_STRATEGY != "NONE") begin
-	    init_done <= 1'b0;
-	    o_ctrl_jump <= 1'b0;
-	    stage_two_req <= 1'b0;
-	 end
+    if (RESET_STRATEGY != "NONE") begin
+       init_done <= 1'b0;
+       o_ctrl_jump <= 1'b0;
+       stage_two_req <= 1'b0;
+    end
       end
    end
 
@@ -181,30 +181,30 @@ module serv_state
        currently running
        */
       if (W == 1) begin : gen_cnt_w_eq_1
-	 reg [3:0] cnt_lsb;
-	 always @(posedge i_clk) begin
+    reg [3:0] cnt_lsb;
+    always @(posedge i_clk) begin
             o_cnt <= o_cnt + {2'd0,cnt_r[3]};
             cnt_lsb <= {cnt_lsb[2:0],(cnt_lsb[3] & !o_cnt_done) | (i_rf_ready & !o_cnt_en)};
-	    if (i_rst & (RESET_STRATEGY != "NONE")) begin
-	       o_cnt   <= 3'd0;
-	       cnt_lsb <= 4'b0000;
-	    end
-	 end
-	 assign cnt_r = cnt_lsb;
-	 assign o_cnt_en = |cnt_lsb;
+       if (i_rst & (RESET_STRATEGY != "NONE")) begin
+          o_cnt   <= 3'd0;
+          cnt_lsb <= 4'b0000;
+       end
+    end
+    assign cnt_r = cnt_lsb;
+    assign o_cnt_en = |cnt_lsb;
       end else if (W == 4) begin : gen_cnt_w_eq_4
-	 reg cnt_en;
-	 always @(posedge i_clk) begin
+    reg cnt_en;
+    always @(posedge i_clk) begin
             if (i_rf_ready) cnt_en <= 1; else
             if (o_cnt_done) cnt_en <= 0;
             o_cnt <= o_cnt + { 2'd0, cnt_en };
-	    if (i_rst & (RESET_STRATEGY != "NONE")) begin
-	       o_cnt   <= 3'd0;
-	       cnt_en <= 1'b0;
-	    end
-	 end
-	 assign cnt_r = 4'b1111;
-	 assign o_cnt_en = cnt_en;
+       if (i_rst & (RESET_STRATEGY != "NONE")) begin
+          o_cnt   <= 3'd0;
+          cnt_en <= 1'b0;
+       end
+    end
+    assign cnt_r = 4'b1111;
+    assign o_cnt_en = cnt_en;
       end
    endgenerate
 
@@ -212,20 +212,20 @@ module serv_state
 
    generate
       if (WITH_CSR) begin : gen_csr
-	 reg 	misalign_trap_sync_r;
+    reg    misalign_trap_sync_r;
 
-	 //trap_pending is only guaranteed to have correct value during the
-	 // last cycle of the init stage
-	 wire trap_pending = WITH_CSR & ((take_branch & i_ctrl_misalign & !ALIGN) |
-					 (i_dbus_en   & i_mem_misalign));
+    //trap_pending is only guaranteed to have correct value during the
+    // last cycle of the init stage
+    wire trap_pending = WITH_CSR & ((take_branch & i_ctrl_misalign & !ALIGN) |
+                (i_dbus_en   & i_mem_misalign));
 
-	 always @(posedge i_clk) begin
-	    if (i_ibus_ack | o_cnt_done | i_rst)
-	      misalign_trap_sync_r <= !(i_ibus_ack | i_rst) & ((trap_pending & o_init) | misalign_trap_sync_r);
-	 end
-	 assign misalign_trap_sync = misalign_trap_sync_r;
+    always @(posedge i_clk) begin
+       if (i_ibus_ack | o_cnt_done | i_rst)
+         misalign_trap_sync_r <= !(i_ibus_ack | i_rst) & ((trap_pending & o_init) | misalign_trap_sync_r);
+    end
+    assign misalign_trap_sync = misalign_trap_sync_r;
       end else begin : gen_no_csr
-	 assign misalign_trap_sync = 1'b0;
+    assign misalign_trap_sync = 1'b0;
       end
    endgenerate
 endmodule

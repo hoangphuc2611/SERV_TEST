@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top_test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="23.829530 us"></ZoomEndTime>
+      <Cursor1Time time="25.105000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="304"></NameColumnWidth>
+      <ValueColumnWidth column_width="297"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="42" />
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/i_rst" type="logic">
+      <obj_property name="ElementShortName">i_rst</obj_property>
+      <obj_property name="ObjectShortName">i_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/top_io/o_ibus_cyc" type="logic">
+      <obj_property name="ElementShortName">o_ibus_cyc</obj_property>
+      <obj_property name="ObjectShortName">o_ibus_cyc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/top_io/i_ibus_ack" type="logic">
+      <obj_property name="ElementShortName">i_ibus_ack</obj_property>
+      <obj_property name="ObjectShortName">i_ibus_ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/test/ibus_dat" type="array">
+      <obj_property name="ElementShortName">ibus_dat[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ibus_dat[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/test/ibus_adr" type="array">
+      <obj_property name="ElementShortName">ibus_adr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ibus_adr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/i_pc_en" type="logic">
+      <obj_property name="ElementShortName">i_pc_en</obj_property>
+      <obj_property name="ObjectShortName">i_pc_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/i_cnt12to31" type="logic">
+      <obj_property name="ElementShortName">i_cnt12to31</obj_property>
+      <obj_property name="ObjectShortName">i_cnt12to31</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/i_cnt0" type="logic">
+      <obj_property name="ElementShortName">i_cnt0</obj_property>
+      <obj_property name="ObjectShortName">i_cnt0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/i_cnt1" type="logic">
+      <obj_property name="ElementShortName">i_cnt1</obj_property>
+      <obj_property name="ObjectShortName">i_cnt1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/i_cnt2" type="logic">
+      <obj_property name="ElementShortName">i_cnt2</obj_property>
+      <obj_property name="ObjectShortName">i_cnt2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/i_jump" type="logic">
+      <obj_property name="ElementShortName">i_jump</obj_property>
+      <obj_property name="ObjectShortName">i_jump</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/i_jal_or_jalr" type="logic">
+      <obj_property name="ElementShortName">i_jal_or_jalr</obj_property>
+      <obj_property name="ObjectShortName">i_jal_or_jalr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/i_utype" type="logic">
+      <obj_property name="ElementShortName">i_utype</obj_property>
+      <obj_property name="ObjectShortName">i_utype</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/i_pc_rel" type="logic">
+      <obj_property name="ElementShortName">i_pc_rel</obj_property>
+      <obj_property name="ObjectShortName">i_pc_rel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/i_trap" type="logic">
+      <obj_property name="ElementShortName">i_trap</obj_property>
+      <obj_property name="ObjectShortName">i_trap</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/i_iscomp" type="logic">
+      <obj_property name="ElementShortName">i_iscomp</obj_property>
+      <obj_property name="ObjectShortName">i_iscomp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/i_imm" type="array">
+      <obj_property name="ElementShortName">i_imm[0:0]</obj_property>
+      <obj_property name="ObjectShortName">i_imm[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/i_buf" type="array">
+      <obj_property name="ElementShortName">i_buf[0:0]</obj_property>
+      <obj_property name="ObjectShortName">i_buf[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/i_csr_pc" type="array">
+      <obj_property name="ElementShortName">i_csr_pc[0:0]</obj_property>
+      <obj_property name="ObjectShortName">i_csr_pc[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/o_rd" type="array">
+      <obj_property name="ElementShortName">o_rd[0:0]</obj_property>
+      <obj_property name="ObjectShortName">o_rd[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/o_bad_pc" type="array">
+      <obj_property name="ElementShortName">o_bad_pc[0:0]</obj_property>
+      <obj_property name="ObjectShortName">o_bad_pc[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/o_ibus_adr" type="array">
+      <obj_property name="ElementShortName">o_ibus_adr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_ibus_adr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/pc_plus_4" type="array">
+      <obj_property name="ElementShortName">pc_plus_4[0:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_plus_4[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/pc_plus_4_cy" type="logic">
+      <obj_property name="ElementShortName">pc_plus_4_cy</obj_property>
+      <obj_property name="ObjectShortName">pc_plus_4_cy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/pc_plus_4_cy_r" type="logic">
+      <obj_property name="ElementShortName">pc_plus_4_cy_r</obj_property>
+      <obj_property name="ObjectShortName">pc_plus_4_cy_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/pc_plus_4_cy_r_w" type="array">
+      <obj_property name="ElementShortName">pc_plus_4_cy_r_w[0:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_plus_4_cy_r_w[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/pc_plus_offset" type="array">
+      <obj_property name="ElementShortName">pc_plus_offset[0:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_plus_offset[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/pc_plus_offset_cy" type="logic">
+      <obj_property name="ElementShortName">pc_plus_offset_cy</obj_property>
+      <obj_property name="ObjectShortName">pc_plus_offset_cy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/pc_plus_offset_cy_r" type="logic">
+      <obj_property name="ElementShortName">pc_plus_offset_cy_r</obj_property>
+      <obj_property name="ObjectShortName">pc_plus_offset_cy_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/pc_plus_offset_cy_r_w" type="array">
+      <obj_property name="ElementShortName">pc_plus_offset_cy_r_w[0:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_plus_offset_cy_r_w[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/pc_plus_offset_aligned" type="array">
+      <obj_property name="ElementShortName">pc_plus_offset_aligned[0:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_plus_offset_aligned[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/plus_4" type="array">
+      <obj_property name="ElementShortName">plus_4[0:0]</obj_property>
+      <obj_property name="ObjectShortName">plus_4[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/pc" type="array">
+      <obj_property name="ElementShortName">pc[0:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/new_pc" type="array">
+      <obj_property name="ElementShortName">new_pc[0:0]</obj_property>
+      <obj_property name="ObjectShortName">new_pc[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/offset_a" type="array">
+      <obj_property name="ElementShortName">offset_a[0:0]</obj_property>
+      <obj_property name="ObjectShortName">offset_a[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/offset_b" type="array">
+      <obj_property name="ElementShortName">offset_b[0:0]</obj_property>
+      <obj_property name="ObjectShortName">offset_b[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/RESET_STRATEGY" type="array">
+      <obj_property name="ElementShortName">RESET_STRATEGY[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RESET_STRATEGY[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/RESET_PC" type="array">
+      <obj_property name="ElementShortName">RESET_PC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RESET_PC[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/WITH_CSR" type="array">
+      <obj_property name="ElementShortName">WITH_CSR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WITH_CSR[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/W" type="array">
+      <obj_property name="ElementShortName">W[31:0]</obj_property>
+      <obj_property name="ObjectShortName">W[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/dut/cpu/ctrl/B" type="array">
+      <obj_property name="ElementShortName">B[31:0]</obj_property>
+      <obj_property name="ObjectShortName">B[31:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -27,7 +27,7 @@ program automatic test_program(
    integer dbus_write_num;
    
    initial begin
-      $readmemh("test_instruction_hex.txt", ibus_mem);
+      $readmemh("test_mdu.hex", ibus_mem);
       $readmemh("test_data_hex.txt", dbus_mem);
       reset();
       forever begin

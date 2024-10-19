@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top_test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="3,735.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="15,790.001 ns"></ZoomEndTime>
+      <Cursor1Time time="5,255.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="304"></NameColumnWidth>
+      <ValueColumnWidth column_width="285"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="38" />
+   <wvobject fp_name="/top_test/mdu_dut/i_clk" type="logic">
+      <obj_property name="ElementShortName">i_clk</obj_property>
+      <obj_property name="ObjectShortName">i_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/i_rst" type="logic">
+      <obj_property name="ElementShortName">i_rst</obj_property>
+      <obj_property name="ObjectShortName">i_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/test/stage_count" type="array">
+      <obj_property name="ElementShortName">stage_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">stage_count[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/top_io/o_ibus_cyc" type="logic">
+      <obj_property name="ElementShortName">o_ibus_cyc</obj_property>
+      <obj_property name="ObjectShortName">o_ibus_cyc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/top_io/i_ibus_ack" type="logic">
+      <obj_property name="ElementShortName">i_ibus_ack</obj_property>
+      <obj_property name="ObjectShortName">i_ibus_ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/test/ibus_dat" type="array">
+      <obj_property name="ElementShortName">ibus_dat[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ibus_dat[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/test/ibus_adr" type="array">
+      <obj_property name="ElementShortName">ibus_adr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ibus_adr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/i_mdu_rs1" type="array">
+      <obj_property name="ElementShortName">i_mdu_rs1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_mdu_rs1[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/i_mdu_rs2" type="array">
+      <obj_property name="ElementShortName">i_mdu_rs2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_mdu_rs2[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/i_mdu_op" type="array">
+      <obj_property name="ElementShortName">i_mdu_op[2:0]</obj_property>
+      <obj_property name="ObjectShortName">i_mdu_op[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/i_mdu_valid" type="logic">
+      <obj_property name="ElementShortName">i_mdu_valid</obj_property>
+      <obj_property name="ObjectShortName">i_mdu_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/o_mdu_ready" type="logic">
+      <obj_property name="ElementShortName">o_mdu_ready</obj_property>
+      <obj_property name="ObjectShortName">o_mdu_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/o_mdu_rd" type="array">
+      <obj_property name="ElementShortName">o_mdu_rd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_mdu_rd[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/valid" type="logic">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/rdata_a" type="array">
+      <obj_property name="ElementShortName">rdata_a[32:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata_a[32:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/rdata_b" type="array">
+      <obj_property name="ElementShortName">rdata_b[32:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata_b[32:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/rd" type="array">
+      <obj_property name="ElementShortName">rd[63:0]</obj_property>
+      <obj_property name="ObjectShortName">rd[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/mul_rd" type="array">
+      <obj_property name="ElementShortName">mul_rd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mul_rd[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/mul_en" type="logic">
+      <obj_property name="ElementShortName">mul_en</obj_property>
+      <obj_property name="ObjectShortName">mul_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/mul_done" type="logic">
+      <obj_property name="ElementShortName">mul_done</obj_property>
+      <obj_property name="ObjectShortName">mul_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/mul_ready" type="logic">
+      <obj_property name="ElementShortName">mul_ready</obj_property>
+      <obj_property name="ObjectShortName">mul_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/is_mul" type="logic">
+      <obj_property name="ElementShortName">is_mul</obj_property>
+      <obj_property name="ObjectShortName">is_mul</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/unsign_mul" type="logic">
+      <obj_property name="ElementShortName">unsign_mul</obj_property>
+      <obj_property name="ObjectShortName">unsign_mul</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/sign_unsign_mul" type="logic">
+      <obj_property name="ElementShortName">sign_unsign_mul</obj_property>
+      <obj_property name="ObjectShortName">sign_unsign_mul</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/is_mulh" type="logic">
+      <obj_property name="ElementShortName">is_mulh</obj_property>
+      <obj_property name="ObjectShortName">is_mulh</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/outsign" type="logic">
+      <obj_property name="ElementShortName">outsign</obj_property>
+      <obj_property name="ObjectShortName">outsign</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/dividend" type="array">
+      <obj_property name="ElementShortName">dividend[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dividend[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/quotient" type="array">
+      <obj_property name="ElementShortName">quotient[31:0]</obj_property>
+      <obj_property name="ObjectShortName">quotient[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/quotient_msk" type="array">
+      <obj_property name="ElementShortName">quotient_msk[31:0]</obj_property>
+      <obj_property name="ObjectShortName">quotient_msk[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/div_rd" type="array">
+      <obj_property name="ElementShortName">div_rd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">div_rd[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/divisor" type="array">
+      <obj_property name="ElementShortName">divisor[62:0]</obj_property>
+      <obj_property name="ObjectShortName">divisor[62:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/div_ready" type="logic">
+      <obj_property name="ElementShortName">div_ready</obj_property>
+      <obj_property name="ObjectShortName">div_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/running" type="logic">
+      <obj_property name="ElementShortName">running</obj_property>
+      <obj_property name="ObjectShortName">running</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/is_div" type="logic">
+      <obj_property name="ElementShortName">is_div</obj_property>
+      <obj_property name="ObjectShortName">is_div</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/is_rem" type="logic">
+      <obj_property name="ElementShortName">is_rem</obj_property>
+      <obj_property name="ObjectShortName">is_rem</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/unsign_div_rem" type="logic">
+      <obj_property name="ElementShortName">unsign_div_rem</obj_property>
+      <obj_property name="ObjectShortName">unsign_div_rem</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/prep" type="logic">
+      <obj_property name="ElementShortName">prep</obj_property>
+      <obj_property name="ObjectShortName">prep</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/mdu_dut/WIDTH" type="array">
+      <obj_property name="ElementShortName">WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WIDTH[31:0]</obj_property>
+   </wvobject>
+</wave_config>
